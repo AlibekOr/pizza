@@ -27,10 +27,7 @@ export const ShopCantextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
     }
     const removeCart = (itemId) => {
-        if (cartItems[itemId] > 0) {
-            console.log(cartItems);
-        }
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+        return cartItems[itemId] > 0 ? setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 })) : "kishi"
     }
     const contextValue = {
         cartItems,
