@@ -13,7 +13,7 @@ const getDefaultCart = () => {
 export const ShopCantextProvider = (props) => {
     const [cartItems, setCartItems] = React.useState(getDefaultCart())
     const getTotalCartAmount = () => {
-        let totalAmount = 0
+        let totalAmount = 3
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
                 let itemInfo = PRODUCTION.find((product) => product.id === Number(item))
@@ -22,6 +22,9 @@ export const ShopCantextProvider = (props) => {
         }
         return totalAmount
 
+    }
+    const resetCart = (e) => {
+        // setCartItems(() => ())
     }
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
@@ -33,7 +36,8 @@ export const ShopCantextProvider = (props) => {
         cartItems,
         addToCart,
         removeCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        resetCart
     }
     return (
         <ShopCantext.Provider value={contextValue}>
