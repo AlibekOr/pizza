@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Modal } from 'antd';
-
+import { CartProuduct } from '../data';
+import { ShopCantext } from "../../../../context/ShopCantext"
+import { useNavigate } from "react-router-dom"
 const Chekout = () => {
+    const { cartItems, getTotalCartAmount } = useContext(ShopCantext)
+    const newData = CartProuduct()
+    const totalAmount = getTotalCartAmount()
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate();
+
     const showModal = () => {
         setIsModalOpen(true);
     };
     const handleOk = () => {
-        setIsModalOpen(false);
+        navigate('/cart')
     };
     const handleCancel = () => {
         setIsModalOpen(false);
@@ -18,9 +25,13 @@ const Chekout = () => {
                 Chekout
             </Button>
             <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <div> Your Order </div>
+                {newData.map((item) => (
+                    <ol key={item.id}>
+                        <li> {item.name}:{cartItems[item.id]} </li>
+                    </ol>
+                ))}
+                <h2>Total price:{totalAmount} </h2>
             </Modal>
         </>
     );

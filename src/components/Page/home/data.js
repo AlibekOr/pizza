@@ -69,8 +69,8 @@ export const CartProuduct = () => {
     const clud = [
         {
             id: 10,
-            name: "Properties",
-            price: 14,
+            name: "cold couts",
+            price: 3,
             img: Img1
         }]
 

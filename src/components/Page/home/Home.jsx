@@ -2,12 +2,13 @@ import React, { useContext } from 'react'
 import { PRODUCTION } from "./data"
 import HomeLeft from './homeLeft/HomeLeft'
 import Product from './Product'
+import Chekout from './chekout/Checkout'
 import { ShopCantext } from '../../../context/ShopCantext'
 import "./home.css"
 const Home = () => {
     const { getTotalCartAmount, resetCart } = useContext(ShopCantext)
     const totalAmount = getTotalCartAmount()
-    
+
     return (
         <div className='home'>
             <HomeLeft />
@@ -21,7 +22,7 @@ const Home = () => {
                         <Product data={item} />
                     ))}
                 </div>
-                <button>checkout</button>
+                <Chekout />
             </div>
         </div >
     )
