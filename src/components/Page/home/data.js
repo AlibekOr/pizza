@@ -7,7 +7,10 @@ import Img6 from "../../../image/6.jpg"
 import Img7 from "../../../image/7.jpg"
 import Img8 from "../../../image/8.jpg"
 import Img9 from "../../../image/9.jpg"
+import Img1 from "../../../image/1.jpg"
 
+import { ShopCantext } from "../../../context/ShopCantext"
+import { useContext } from 'react'
 export const PRODUCTION = [
     {
         id: 1,
@@ -59,3 +62,18 @@ export const PRODUCTION = [
     },
 
 ]
+
+export const CartProuduct = () => {
+    const { cartItems } = useContext(ShopCantext)
+    const result = PRODUCTION.filter((product) => cartItems[product.id] !== 0)
+    const clud = [
+        {
+            id: 10,
+            name: "Properties",
+            price: 14,
+            img: Img1
+        }]
+
+    const newData = clud.concat(result)
+    return newData
+}

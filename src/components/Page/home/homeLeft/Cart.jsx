@@ -1,16 +1,9 @@
 import React from 'react'
 import Img1 from "../../../../image/1.jpg"
+import { CartProuduct } from "../data"
 import "./homeLeft.css"
-const Cart = ({ data }) => {
-    const e = data
-    const clud = [
-        {
-            id: 10,
-            name: "Properties",
-            price: 14,
-            img: Img1
-        }]
-    const newData = clud.concat(e)
+const Cart = () => {
+    const newData = CartProuduct()
     return (
         <div className='homeLeft'>
             {newData.map((items) => (

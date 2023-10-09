@@ -7,19 +7,21 @@ import "./home.css"
 const Home = () => {
     const { getTotalCartAmount, resetCart } = useContext(ShopCantext)
     const totalAmount = getTotalCartAmount()
+    
     return (
         <div className='home'>
             <HomeLeft />
             <div className='right'>
                 <div className='checkout'>
                     <p>Subtotal:${totalAmount} </p>
-                    <button onClick={(e) => resetCart(e)} >reset </button>
+                    <button onClick={resetCart}>reset</button>
                 </div>
                 <div>
                     {PRODUCTION.map((item) => (
                         <Product data={item} />
                     ))}
                 </div>
+                <button>checkout</button>
             </div>
         </div >
     )

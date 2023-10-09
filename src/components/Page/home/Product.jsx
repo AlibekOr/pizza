@@ -13,6 +13,7 @@ const Product = (props) => {
                 <div> {cartItemAmount} </div>
                 <button className='btnCilick jasil' onClick={() => addToCart(id)}>+</button>
             </div>
+
         </div>
     )
 }

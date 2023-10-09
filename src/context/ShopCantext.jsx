@@ -12,6 +12,13 @@ const getDefaultCart = () => {
 
 export const ShopCantextProvider = (props) => {
     const [cartItems, setCartItems] = React.useState(getDefaultCart())
+    const resetCart = () => {
+        let resetCart = {}
+        for (let i = 0; i < PRODUCTION.length + 1; i++) {
+            resetCart[i] = 0
+            setCartItems(resetCart)
+        }
+    }
     const getTotalCartAmount = () => {
         let totalAmount = 3
         for (const item in cartItems) {
@@ -21,10 +28,6 @@ export const ShopCantextProvider = (props) => {
             }
         }
         return totalAmount
-
-    }
-    const resetCart = (e) => {
-        // setCartItems(() => ())
     }
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
