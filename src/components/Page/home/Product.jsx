@@ -7,7 +7,7 @@ const Product = (props) => {
     return (
         <div  >
             <div>{name}</div>
-            <div>{price}</div>
+            <div>${price}</div>
             <div className='divBTn' >
                 <button className='btnCilick qizil' onClick={() => removeCart(id)} >-</button>
                 <div> {cartItemAmount} </div>

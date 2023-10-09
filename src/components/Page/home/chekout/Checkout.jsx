@@ -28,10 +28,10 @@ const Chekout = () => {
                 <div> Your Order </div>
                 {newData.map((item) => (
                     <ol key={item.id}>
-                        <li> {item.name}:{cartItems[item.id]} </li>
+                        <li> {item.name}:${cartItems[item.id]} </li>
                     </ol>
                 ))}
-                <h2>Total price:{totalAmount} </h2>
+                <h2>Total price:${totalAmount} </h2>
             </Modal>
         </>
     );
