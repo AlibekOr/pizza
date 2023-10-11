@@ -1,4 +1,31 @@
 .CheckFor {
     margin: 0 auto;
-    transform: translateY(30%);
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.chekotInner {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.chekotItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgsChekot {
+    width: 120px;
+    height: 100px;
+}
+
+.chekotInnfo {
+    position: relative;
+    left: 50%;
 }

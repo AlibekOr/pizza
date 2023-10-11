@@ -19,6 +19,7 @@ export const ShopCantextProvider = (props) => {
             setCartItems(resetCart)
         }
     }
+
     const getTotalCartAmount = () => {
         let totalAmount = 3
         for (const item in cartItems) {

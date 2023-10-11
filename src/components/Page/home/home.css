@@ -48,3 +48,16 @@
 .qizil {
     background-color: brown;
 }
+
+.localStogar {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.btnLocal {
+    padding: 5px;
+    border-radius: 10px;
+    border-color:#47474738 ;
+}

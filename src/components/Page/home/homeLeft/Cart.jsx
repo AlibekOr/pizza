@@ -1,5 +1,4 @@
 import React from 'react'
-import Img1 from "../../../../image/1.jpg"
 import { CartProuduct } from "../data"
 import "./homeLeft.css"
 const Cart = () => {

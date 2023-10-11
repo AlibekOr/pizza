@@ -4,6 +4,7 @@ import HomeLeft from './homeLeft/HomeLeft'
 import Product from './Product'
 import Chekout from './chekout/Checkout'
 import { ShopCantext } from '../../../context/ShopCantext'
+import LocolStorages from './LocolStorages'
 import "./home.css"
 const Home = () => {
     const { getTotalCartAmount, resetCart } = useContext(ShopCantext)
@@ -22,7 +23,10 @@ const Home = () => {
                         <Product data={item} />
                     ))}
                 </div>
-                <Chekout />
+                <div>
+                    <Chekout />
+                    <LocolStorages />
+                </div>
             </div>
         </div >
     )
