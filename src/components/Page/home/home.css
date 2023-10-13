@@ -50,14 +50,36 @@
 }
 
 .localStogar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding-top: 10px;
-    margin-bottom: 30px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 .btnLocal {
     padding: 5px;
     border-radius: 10px;
-    border-color:#47474738 ;
+    border-color: #47474738;
+}
+
+.remove {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: 30px;
+}
+
+.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 30px;
+
+}
+
+.btnCopy {
+    border: transparent;
+    background-color: transparent;
 }

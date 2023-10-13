@@ -41,7 +41,8 @@ export const ShopCantextProvider = (props) => {
         addToCart,
         removeCart,
         getTotalCartAmount,
-        resetCart
+        resetCart,
+        setCartItems
     }
     return (
         <ShopCantext.Provider value={contextValue}>

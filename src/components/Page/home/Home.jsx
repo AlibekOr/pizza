@@ -19,8 +19,8 @@ const Home = () => {
                     <button onClick={resetCart}>reset</button>
                 </div>
                 <div>
-                    {PRODUCTION.map((item) => (
-                        <Product data={item} />
+                    {PRODUCTION.map((item, key) => (
+                        <div key={key}><Product data={item} /></div>
                     ))}
                 </div>
                 <div>
